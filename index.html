@@ -325,50 +325,50 @@ const STAGES=[
     desc:"الدالة آلة نبنيها مرة ونشغّلها كل ما نبي.", intro:"بايتي تعب من إعادة الشغل! نعلّموه يبني آلة (دالة) يستعملها مرّات 🏭",
     tasks:[
       {kind:"concept", type:"mcq", q:"ليش نستعملوا الدوال؟", opts:["نكتب الكود مرة ونعيد استخدامه","باش الكود يطوّل","ما ليهاش فايدة","تمسح الشاشة"], answer:0, why:"الدالة زي آلة: نبنيها مرة، ونشغّلها كل ما نحتاج — بدون ما نعيد الكود."},
-      {kind:"concept", type:"mcq", q:"شن الكلمة اللي نعرّفوا بيها دالة؟", code:'def رحّب():\n    print("أهلا")', opts:["def","print","func","make"], answer:0, why:"def معناها «عرّف» — بيها نبنيوا الدالة."},
+      {kind:"concept", type:"mcq", q:"شن الكلمة اللي نعرّفوا بيها دالة؟", code:'def greet():\n    print("أهلا")', opts:["def","print","func","make"], answer:0, why:"def معناها «عرّف» — بيها نبنيوا الدالة."},
       {kind:"concept", type:"mcq", q:"بعد ما نعرّف الدالة، كيف نشغّلها؟", opts:["نكتب اسمها متبوع بقوسين ()","نكتب def مرة ثانية","تشتغل وحدها","نمسحها"], answer:0, why:"النداء (call) = اسم الدالة + قوسين، مثلاً: رحّب()."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def رحّب():\n    print("أهلا بايتي")\n\nرحّب()', opts:["أهلا بايتي","رحّب","لا شيء","خطأ"], answer:0, why:"عرّفنا الدالة، ولما ناديناها رحّب() اشتغلت وطبعت «أهلا بايتي»."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def greet():\n    print("أهلا بايتي")\n\ngreet()', opts:["أهلا بايتي","greet","لا شيء","خطأ"], answer:0, why:"عرّفنا الدالة، ولما ناديناها رحّب() اشتغلت وطبعت «أهلا بايتي»."},
       {kind:"concept", type:"tf", q:"نقدروا نستدعي نفس الدالة أكثر من مرة.", answer:true, why:"هذا سرّ الدوال — نبنيها مرة ونعيد استخدامها هلبا مرّات."}
     ]
   },
   { id:1, emoji:"🎁", title:"المدخلات", tag:"parameters · arguments",
     desc:"نعطي الآلة مدخلات تشتغل عليها.", intro:"الآلة تصير أذكى لما نعطيها مدخلات! تعلّم المعاملات 🎁",
     tasks:[
-      {kind:"concept", type:"mcq", q:"المدخل اللي نحطّوه بين قوسين الدالة نسمّوه؟", code:'def رحّب(الاسم):\n    ...', opts:["معامل (parameter)","ناتج","حلقة","شرط"], answer:0, why:"اللي بين القوسين وقت التعريف = معامل (parameter)."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def رحّب(الاسم):\n    print("أهلا " + الاسم)\n\nرحّب("علي")', opts:["أهلا علي","أهلا الاسم","علي","خطأ"], answer:0, why:"مرّرنا «علي» فحلّت محل الاسم → «أهلا علي»."},
-      {kind:"concept", type:"mcq", q:"كم معامل تاخذ هذي الدالة؟", code:'def جمع(أ, ب):\n    return أ + ب', opts:["2","1","0","3"], answer:0, why:"عندها معاملين: أ و ب."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def ربّع(x):\n    print(x * x)\n\nربّع(5)', opts:["25","10","5","خطأ"], answer:0, why:"x = 5، وx*x = 25."},
-      {kind:"concept", type:"mcq", q:"في النداء رحّب(\"سارة\") — كلمة «سارة» نسمّوها؟", opts:["وسيط / قيمة (argument)","دالة","شرط","حلقة"], answer:0, why:"القيمة اللي نمرّرها وقت النداء = وسيط (argument)."}
+      {kind:"concept", type:"mcq", q:"المدخل اللي نحطّوه بين قوسين الدالة نسمّوه؟", code:'def greet(name):\n    ...', opts:["معامل (parameter)","ناتج","حلقة","شرط"], answer:0, why:"اللي بين القوسين وقت التعريف = معامل (parameter)."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def greet(name):\n    print("أهلا " + name)\n\ngreet("علي")', opts:["أهلا علي","أهلا name","علي","خطأ"], answer:0, why:"مرّرنا «علي» فحلّت محل name → «أهلا علي»."},
+      {kind:"concept", type:"mcq", q:"كم معامل تاخذ هذي الدالة؟", code:'def add(a, b):\n    return a + b', opts:["2","1","0","3"], answer:0, why:"عندها معاملين: a و b."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def square(x):\n    print(x * x)\n\nsquare(5)', opts:["25","10","5","خطأ"], answer:0, why:"x = 5، وx*x = 25."},
+      {kind:"concept", type:"mcq", q:"في النداء greet(\"سارة\") — كلمة «سارة» نسمّوها؟", opts:["وسيط / قيمة (argument)","دالة","شرط","حلقة"], answer:0, why:"القيمة اللي نمرّرها وقت النداء = وسيط (argument)."}
     ]
   },
   { id:2, emoji:"📤", title:"الإخراج (return)", tag:"return",
     desc:"الآلة ترجّع لك ناتج تستعمله.", intro:"الآلة الكويسة ترجّع نتيجة! تعلّم return 📤",
     tasks:[
       {kind:"concept", type:"mcq", q:"return تسوّي شن؟", opts:["ترجّع نتيجة من الدالة نستعملها","تطبع على الشاشة بس","تمسح المتغيّرات","توقف البرنامج"], answer:0, why:"return تخرّج قيمة من الدالة نقدروا نخزّنوها ونستعملوها."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def جمع(أ, ب):\n    return أ + ب\n\nنتيجة = جمع(3, 4)\nprint(نتيجة)', opts:["7","34","جمع","خطأ"], answer:0, why:"الدالة رجّعت 7، خزّناها في «نتيجة» وطبعناها."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def add(a, b):\n    return a + b\n\nresult = add(3, 4)\nprint(result)', opts:["7","34","add","خطأ"], answer:0, why:"الدالة رجّعت 7، خزّناها في result وطبعناها."},
       {kind:"concept", type:"mcq", q:"شن الفرق بين return و print؟", opts:["return ترجّع قيمة نستعملها · print تعرض على الشاشة بس","نفس الشيء تماماً","return تطبع","print ترجّع قيمة"], answer:0, why:"print تعرض فقط، أما return تعطينا قيمة نكمّل بيها الحساب."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def ربّع(x):\n    return x * x\n\nprint(ربّع(4) + 1)', opts:["17","16","8","خطأ"], answer:0, why:"ربّع(4) رجّعت 16، و16 + 1 = 17."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def square(x):\n    return x * x\n\nprint(square(4) + 1)', opts:["17","16","8","خطأ"], answer:0, why:"square(4) رجّعت 16، و16 + 1 = 17."},
       {kind:"concept", type:"tf", q:"الدالة تقدر ما ترجّعش أي شيء (بدون return).", answer:true, why:"فيه دوال تسوّي شغل بس (زي الطباعة) بدون ما ترجّع قيمة."}
     ]
   },
   { id:3, emoji:"⚙️", title:"إعدادات الآلة", tag:"default · عدّة معاملات",
     desc:"قيم افتراضية وأكثر من مدخل.", intro:"نضبطوا الآلة: قيم افتراضية وأكثر من مدخل ⚙️",
     tasks:[
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def رحّب(الاسم="زائر"):\n    print("أهلا " + الاسم)\n\nرحّب()', opts:["أهلا زائر","أهلا الاسم","خطأ","لا شيء"], answer:0, why:"ما مرّرناش قيمة، فاستعملت القيمة الافتراضية «زائر»."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def greet(name="زائر"):\n    print("أهلا " + name)\n\ngreet()', opts:["أهلا زائر","أهلا name","خطأ","لا شيء"], answer:0, why:"ما مرّرناش قيمة، فاستعملت القيمة الافتراضية «زائر»."},
       {kind:"concept", type:"mcq", q:"القيمة الافتراضية تُستعمل إمتى؟", opts:["لما ما نعطيش قيمة وقت النداء","في كل الحالات","أبداً","لما نغلط"], answer:0, why:"لو مرّرنا قيمة تحل محلها، ولو ما مرّرناش تشتغل الافتراضية."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def معلومات(اسم, عمر):\n    print(اسم, عمر)\n\nمعلومات("سالم", 12)', opts:["سالم 12","12 سالم","اسم عمر","خطأ"], answer:0, why:"المعاملات تتعبّى بالترتيب: اسم=سالم، عمر=12."},
-      {kind:"concept", type:"mcq", q:"شن يرجّع جمع(1, 2, 3)؟", code:'def جمع(أ, ب, ج):\n    return أ + ب + ج', opts:["6","123","5","خطأ"], answer:0, why:"1 + 2 + 3 = 6."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def رحّب(الاسم="زائر"):\n    print("أهلا " + الاسم)\n\nرحّب("مريم")', opts:["أهلا مريم","أهلا زائر","مريم","خطأ"], answer:0, why:"مرّرنا «مريم» فحلّت محل القيمة الافتراضية."}
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def info(name, age):\n    print(name, age)\n\ninfo("سالم", 12)', opts:["سالم 12","12 سالم","اسم عمر","خطأ"], answer:0, why:"المعاملات تتعبّى بالترتيب: name=سالم، age=12."},
+      {kind:"concept", type:"mcq", q:"شن يرجّع add(1, 2, 3)؟", code:'def add(a, b, c):\n    return a + b + c', opts:["6","123","5","خطأ"], answer:0, why:"1 + 2 + 3 = 6."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def greet(name="زائر"):\n    print("أهلا " + name)\n\ngreet("مريم")', opts:["أهلا مريم","أهلا زائر","مريم","خطأ"], answer:0, why:"مرّرنا «مريم» فحلّت محل القيمة الافتراضية."}
     ]
   },
   { id:4, emoji:"🧠", title:"التحدّي الأخير", tag:"تتبّع + نطاق",
     desc:"جمّع كل مهاراتك في الدوال!", intro:"المرحلة الأخيرة! بايتي يجمع كل اللي تعلّمه عن الدوال 🧠",
     tasks:[
-      {kind:"concept", type:"mcq", q:"شن يطبع بالترتيب؟", code:'def ربّع(x):\n    return x * x\n\nprint(ربّع(2))\nprint(ربّع(3))', opts:["4 ثم 9","4 ثم 4","9 ثم 9","6"], answer:0, why:"نفس الدالة بمدخلات مختلفة = نواتج مختلفة: 4 و9."},
+      {kind:"concept", type:"mcq", q:"شن يطبع بالترتيب؟", code:'def square(x):\n    return x * x\n\nprint(square(2))\nprint(square(3))', opts:["4 ثم 9","4 ثم 4","9 ثم 9","6"], answer:0, why:"نفس الدالة بمدخلات مختلفة = نواتج مختلفة: 4 و9."},
       {kind:"concept", type:"mcq", q:"المتغيّر اللي نعرّفوه جوّه الدالة يشتغل وين؟", opts:["جوّه الدالة بس (محلي)","في كل البرنامج","ما يشتغلش","برّة الدالة بس"], answer:0, why:"المتغيّر المحلي يعيش جوّه دالته فقط — هذا اسمه «النطاق» (scope)."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def زيد1(x):\n    return x + 1\n\nprint(زيد1(زيد1(5)))', opts:["7","6","51","خطأ"], answer:0, why:"زيد1(5) = 6، وزيد1(6) = 7. الداخلية تتنفّذ الأول."},
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def add1(x):\n    return x + 1\n\nprint(add1(add1(5)))', opts:["7","6","51","خطأ"], answer:0, why:"add1(5) = 6، وadd1(6) = 7. الداخلية تتنفّذ الأول."},
       {kind:"concept", type:"mcq", q:"ليش الدوال تخلّي الكود أنظف؟", opts:["نكتب المنطق مرة ونعيد استخدامه بأسماء واضحة","تخلّيه أطول","تبطّئه","ما تفرقش"], answer:0, why:"تنظيم + إعادة استخدام + أسماء تشرح نفسها = كود أنظف."},
-      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def حيّي(اسم):\n    return "يا هلا " + اسم\n\nرسالة = حيّي("بايتي")\nprint(رسالة)', opts:["يا هلا بايتي","حيّي","اسم","خطأ"], answer:0, why:"الدالة رجّعت «يا هلا بايتي»، خزّناها وطبعناها. بايتي بقا مخترع دوال! 🎉"}
+      {kind:"concept", type:"mcq", q:"شن يطبع؟", code:'def hi(name):\n    return "يا هلا " + name\n\nmessage = hi("بايتي")\nprint(message)', opts:["يا هلا بايتي","hi","name","خطأ"], answer:0, why:"الدالة رجّعت «يا هلا بايتي»، خزّناها في message وطبعناها. بايتي بقا مخترع دوال! 🎉"}
     ]
   }
 ];
@@ -430,7 +430,7 @@ let curCorrect=0, curTask=null;
 function startStage(i){ cur={ stage:i, idx:0, gained:0, correctInStage:0, totalInStage:STAGES[i].tasks.length, mistakes:0 }; playing=true; S.stage=i; save(); updateHUD(); show("scPlay"); renderTask(); }
 function renderTask(){ const s=STAGES[cur.stage], t=s.tasks[cur.idx]; curTask=t; if(t.kind==="concept") renderQuestion(s,t); else renderInteractive(s,t); }
 
-function codeHTML(code){ if(!code) return ""; let h=code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\b(for|in|if|else|elif|print|range)\b/g,m=>(m==='range'||m==='print')?'<span class="fn">'+m+'</span>':'<span class="kw">'+m+'</span>').replace(/\b(\d+)\b/g,'<span class="num">$1</span>'); return '<div class="code">'+h+'</div>'; }
+function codeHTML(code){ if(!code) return ""; let h=code.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\b(def|return|for|in|if|else|elif|print|range)\b/g,m=>(m==='range'||m==='print')?'<span class="fn">'+m+'</span>':'<span class="kw">'+m+'</span>').replace(/\b(\d+)\b/g,'<span class="num">$1</span>'); return '<div class="code">'+h+'</div>'; }
 
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;const t=a[i];a[i]=a[j];a[j]=t;}return a;}
 function renderQuestion(s,q){
